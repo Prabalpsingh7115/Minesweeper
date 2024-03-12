@@ -1,29 +1,19 @@
-import {createRoot} from 'react-dom/client';
-import PlayingWindow from './PlayingWindow';
-import GenerateMatrix from './GenerateMatrix';
+import {createRoot} from "react-dom/client"
+import Board from "./Board";
+import GenerateMatrix from "./GenerateMatrix";
+// import Cell from "./Cell";
 
 const App = () => {
-
-    GenerateMatrix();
-
+    let arr =GenerateMatrix(6,6);
 
     return (
         <div id="main">
-            <div className='header'>
-                <h2>Minesweeper</h2>
-            </div>
-            <PlayingWindow
-            cells={matrix}/>
-            <div className='buttons'>
-                <button id="start" >Start</button>
-                <button id="newgame" onClick={()=>{
-                    setMatrix(GenerateMatrix());
-                }}>New game</button>
-            </div>
+            <h1>MineSweeper</h1>
+            <Board arr={arr}/>
         </div>
-    );
-};
+    )
+}
 
-const container = document.getElementById("root");
-const root = createRoot(container);
-root.render(<App/>)
+const container=document.getElementById("root");
+const root=createRoot(container);
+root.render(<App/>);
