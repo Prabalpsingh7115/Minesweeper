@@ -2,10 +2,12 @@
   "name": "minesweeper",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://minesweeper.github.io/react-gh-pages",
+
   "main": "index.js",
   "scripts": {
     "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist",
+    "deploy":"gh-pages -b master -d dist",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
