@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "homepage": "https://prabalpsingh7115.github.io/Minesweeper/",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
