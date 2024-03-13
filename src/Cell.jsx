@@ -1,4 +1,4 @@
-const Cell = ({hidden,mine,flag,val,pos,updateCell, destroyCells})=>{
+const Cell = ({hidden,mine,flag,val,pos,updateCell, destroyCells,showCells,clickedMine})=>{
 
     const leftClickHandler = ()=>{
 
@@ -14,9 +14,11 @@ const Cell = ({hidden,mine,flag,val,pos,updateCell, destroyCells})=>{
                 if(mine)
                 {
                     setTimeout(()=>{alert("GameOver")},150);
-                } else if(val === 0) [
+                    showCells(pos);
+                } 
+                else if(val === 0) {
                     destroyCells(pos)
-                ]
+                }
             }    
         }
     }
@@ -42,9 +44,13 @@ const Cell = ({hidden,mine,flag,val,pos,updateCell, destroyCells})=>{
                 )
             ):(
                 (mine)?(
-                    <img src="./assets/mine.png" alt="mine cell" />
+                    (clickedMine)?(
+                    <img id="clickedMine" src="./assets/mine.png" alt="mine cell" />
+                    ):(
+                        <img src="./assets/mine.png" alt="mine cell" />
+                    )
                 ):(
-                    <p>{val}</p>
+                    <p>{val||""}</p>
                 )
             )
         }

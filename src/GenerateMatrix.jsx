@@ -9,7 +9,8 @@ export default function GenerateMatrix(n,m){
                 isHidden:true,
                 isMine:false,
                 isFlag:false,
-                pos:i
+                pos:i,
+                clickedMine:false
             };
             arr[i]=cell;
         }
@@ -18,12 +19,10 @@ export default function GenerateMatrix(n,m){
         {
             let p=Math.floor((Math.random() * (m*n)));
             arr[p]["isMine"]=true
-            // arr[p]["isFlag"]=true
             arr[p]["val"]=-1
         }
 
         initValues(arr,n,m);
-        // console.log(arr);
         return arr;
 }
 
@@ -33,6 +32,7 @@ function initValues(arr,n,m){
 
     let dx=[-1,-1,-1,0,0,1,1,1]
     let dy=[-1,0,1,-1,1,-1,0,1]
+
 
     for(let i=0;i<n;i++)
     {
@@ -62,5 +62,6 @@ function initValues(arr,n,m){
             }
         }
     }
+   
     
 }

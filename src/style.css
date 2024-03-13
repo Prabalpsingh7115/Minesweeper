@@ -4,13 +4,14 @@
 *{
     padding:0;
     margin:0;
-    overflow-x: hidden;
+    overflow: hidden;
     font-family: 'Libre Baskerville', serif;
     font-family: 'Mukta', sans-serif;
 }
 
 #root{
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: black;
@@ -22,16 +23,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap:10px
 }
 
 #board{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#window{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#matrix{
     margin: 10px;
     display: grid;
     grid-template-columns: repeat(6,5vw);
     grid-template-rows: repeat(6,5vw);
-    overflow: hidden;
 }
-
 
 .cell{
     display: flex;
@@ -54,7 +66,19 @@ img{
 }
 
 #new_game{
-    margin: 10px;
-    width:20vw;
-    margin: 25% 100%;
+    padding: 0.5vw;
+    margin: 10px 0
 }
+
+#clickedMine{
+    background-color: lightcoral;
+}
+
+#game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+
