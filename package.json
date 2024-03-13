@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "homepage": "https://prabalpsingh7115.github.io/Minesweeper/",
-
   "main": "index.js",
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -b master -d dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -32,6 +31,7 @@
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "use-sound": "^4.0.1"
   }
 }
